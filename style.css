@@ -1,0 +1,72 @@
+/* ROBOT.GIF from Giphy - https://giphy.com/gifs/robot-cinema-4d-eyedesyn-3o7abtn7DuREEpsyWY */
+
+html {
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  /* background-image: linear-gradient(to right, #1A2980, #26D0CE);
+  */
+  background: #45badd;
+}
+
+.container {
+  /* 
+    the reason of using vh and vw to dynamically scale 
+    our project based on the size of the view port or on the window
+  */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  /* the reason of flex direction is to make elements from top to bottom not from left to right */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: url('./robot.gif');
+  background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+button {
+  padding: 10px 20px;
+  outline: none;
+  background-color: #ff3482;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  letter-spacing: 2px;
+  border: none;
+  transition: .3s;
+  border-radius: 7px;
+  box-shadow: 2px 2px 20px 12px rgba(0, 0, 0, .3);
+}
+
+button:hover{
+  filter: brightness(95%);
+}
+
+button:active{
+  transform: scale(.90);
+}
+
+button:disabled {
+  cursor: default;
+  filter: brightness(40%);
+}
+
+/* media Query: Tablet or smaller */
+@media screen and (max-width: 1000px){
+  .container{
+    background-position: center center;
+    background-size: cover;
+  }
+
+  button {
+    box-shadow: 3px 3px 30px 20px rgba(0,0,0,.4);
+  }
+}
